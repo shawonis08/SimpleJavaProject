@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.6.5.2
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 05, 2016 at 05:03 PM
--- Server version: 10.1.8-MariaDB
--- PHP Version: 5.6.14
+-- Generation Time: May 12, 2017 at 10:52 PM
+-- Server version: 10.1.21-MariaDB
+-- PHP Version: 7.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,8 +17,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `speedpoiter`
+-- Database: `managment`
 --
+CREATE DATABASE IF NOT EXISTS `managment` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `managment`;
 
 -- --------------------------------------------------------
 
@@ -27,29 +29,19 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `registrations` (
-  `uname` varchar(20) NOT NULL,
-  `email` varchar(20) NOT NULL,
-  `password` varchar(20) NOT NULL,
-  `hscore` int(100) DEFAULT NULL,
-  `auth` int(1) NOT NULL
+  `uname` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  `id` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `registrations`
 --
 
-INSERT INTO `registrations` (`uname`, `email`, `password`, `hscore`, `auth`) VALUES
-('', '', '', 0, 1);
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `registrations`
---
-ALTER TABLE `registrations`
-  ADD PRIMARY KEY (`email`);
+INSERT INTO `registrations` (`uname`, `email`, `password`, `id`) VALUES
+('@', '@', '1', 1),
+('@', '@', '1', 1);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
