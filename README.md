@@ -1,0 +1,2 @@
+# SimpleJavaProject
+Insert,Update,Delete
